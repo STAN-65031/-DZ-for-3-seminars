@@ -22,6 +22,9 @@ def input_numbers(inputText):
         try:
             number = int(input(f"{inputText}"))
             okey = True
+            if number == 0:
+                okey = False
+                print("Список не может быть равен 0")
         except ValueError:
             print("Это не число!")
     return number
